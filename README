@@ -1,0 +1,15 @@
+This is intended to be a ruby wrapper for abiword.
+It only works on 64 bit linux, because thats where I 
+a) Need it to run on that platform
+b) I didn't have time to compile abiword on mac. 
+
+Right now all it does is convert doc and docx files to pdf format.
+
+Its very simple to use
+
+require 'abiword'
+
+Abiword::Abiword.doc2pdf("docfile.doc")
+
+It creates a file called docfile.pdf in the same directory as docfile doc 
+
