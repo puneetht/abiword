@@ -1,6 +1,6 @@
-require 'rubygems'
-require 'rake/packagetask'
-require 'rake/gempackagetask'
+#require 'rubygems'
+#require 'rake/packagetask'
+#require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |s|
   s.name = "abiword"
