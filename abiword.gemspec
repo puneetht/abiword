@@ -4,7 +4,7 @@
 
 spec = Gem::Specification.new do |s|
   s.name = "abiword"
-  s.version = "0.2"
+  s.version = "0.2.1"
   s.authors = ["Puneet Paul"]
   s.email = "puneetpaul74@gmail.com"
   s.platform = Gem::Platform::RUBY
