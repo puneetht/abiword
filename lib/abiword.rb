@@ -41,7 +41,7 @@ module Abiword
       
       outfile = File.join(File.dirname(infile),File.basename(infile,".*")) + ".pdf"
       cmd = @@binary_path
-      cmd += " --to=pdf"
+      cmd += " --to-pdf"
       cmd += " #{infile}"
       cmd += " -o #{outfile}"
 
