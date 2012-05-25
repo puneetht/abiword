@@ -2,9 +2,6 @@ require 'test/unit'
 require File.join(File.dirname(File.dirname(__FILE__)),"lib/abiword")
 
 class TestAbiword < Test::Unit::TestCase
-  def setup
-    Abiword::Abiword.set_binary_path
-  end
   
   def cleanup
     File.delete('testfiles/testfile.pdf') if File.exists?('testfiles/testfile.pdf')

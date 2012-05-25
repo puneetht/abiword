@@ -27,9 +27,7 @@ end
 module Abiword
   
   class Abiword
-    @@binary = "abiword_linux"
-    @@binary_dir = File.join(File.dirname(File.dirname(__FILE__)),"bin")
-    @@binary_path = ""
+    @@binary_path = "abiword"
     
     def self.doc2pdf(infile)
       self.set_binary_path if @@binary_path.empty?
@@ -41,7 +39,7 @@ module Abiword
       
       outfile = File.join(File.dirname(infile),File.basename(infile,".*")) + ".pdf"
       cmd = @@binary_path
-      cmd += " --to-pdf"
+      cmd += " --to=pdf"
       cmd += " #{infile}"
       cmd += " -o #{outfile}"
 
@@ -58,15 +56,8 @@ module Abiword
       return outfile
     end
   
-    def self.set_binary_path
-      if OsFunctions::is_mac?
-        @@binary = "abiword_macos"
-      elsif OsFunctions::is_linux?
-        @@binary == "abiword_linux"
-      else
-        raise "This ruby packge only works on mac and on linux"
-      end
-       @@binary_path = File.join(@@binary_dir,@@binary)
+    def set_binary_path       
+       @@binary_path = "abiword" 
     end
   end
 end
